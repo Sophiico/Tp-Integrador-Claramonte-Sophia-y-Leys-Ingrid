@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Claramonte Sophia y Leys Ingrid">
+    <meta name="keywords" content="Billie Eilish, Eilish, Perfume, Fragance, Scent, Eilish No. 2, Eilish No. 3">
+
+    <script src="https://kit.fontawesome.com/a7f065bbe6.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>Eilish - Survey</title>
+</head>
+<body class="body3">
+    <header>
+        <a href="index.html"><img src="img/Billie_Eilish_Logo.png" alt="logo"></a>
+        <nav>
+            <a href="products.html">Products</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="survey.html">Survey</a>
+            <a href="ranking.html">Ranking</a>
+        </nav>
+    </header>
+    <main class="main3">
+        <section id="encuesta">
+            <div class="survey">
+                <h2>We want to know your opinion!</h2>
+                <form action="#" method="get">
+                    <div class="pregunta">
+                        <label>Have you tried our fragrances before?</label> <br>
+                            <label><input type="radio" name="opcion" id="si" value="Si" checked="checked">Si</label>
+                            <label><input type="radio" name="opcion" id="no" value="No" checked="checked">No</label> 
+                    </div>
+                    <div class="pregunta">
+                        <label>What fragrance did you try?</label><br>
+                        <input type="checkbox" name="opcion1" id="eilish" value="eilish"><label for="opcion1">Eilish</label>
+                        <input type="checkbox" name="opcion2" id="eilishn2" value="eilish n2"><label for="opcion2">Eilish No. 2</label>
+                        <input type="checkbox" name="opcion3" id="eilishn3" value="eilish n3"><label for="opcion3">Eilish No. 3</label>
+                        </div>
+                    <div class="pregunta">
+                        <label>Were our products satisfactory?</label><br>
+                        <label><input type="radio" name="opcion" id="si" value="Si" checked="checked">Si</label>
+                        <label><input type="radio" name="opcion" id="no" value="No" checked="checked">No</label> 
+                    </div>
+                    <div class="pregunta">
+                        <label>Would you recommend our fragrances to other people?</label><br>
+                        <label><input type="radio" name="opcion" id="si" value="Si" checked="checked">Si</label>
+                        <label><input type="radio" name="opcion" id="no" value="No" checked="checked">No</label>
+                        <label><input type="radio" name="opcion" id="maybe" value="maybe" checked="checked">Maybe</label>
+                    </div>
+                    <div class="selector">
+                        <select name="fav" id="fav">
+                            <option value="" disabled selected hidden>What is your favorite fragrance?</option>
+                            <option value="eilish">Eilish</option>
+                            <option value="Eilish N°2">Eilish No. 2</option>
+                            <option value="Eilish N°3">Eilish No. 3</option>
+                        </select>
+                    </div>
+                    <div id="comentario">
+                        <textarea name="comentario" id="comentario" placeholder="Are there any scents you would like us to add to our fragrance line?"></textarea>
+                    </div>
+                    <input type="button" name="send" id="send" value="Send" class="button">
+                </form>
+            </div>
+            <img id="img1" src="img/eilish11.png" alt="">
+            <img id="img2" src="img/eilish2.png" alt="">
+            <div class="survey survey2">
+                <h2>We want to know you better!</h2>
+                <form action="#" method="post">
+                    <div class="years">
+                        <label for="years">How old are you?</label><br>
+                        <input type="number" name="years" id="years" placeholder="Years">
+                    </div>
+                    <div class="selector">
+                        <select name="pais" id="pais">
+                            <option value="" disabled selected hidden>Select your country</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="United States">United States</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Korea">Korea</option>
+                        </select>
+                    </div>
+                    <div class="radiobutton">
+                        <label class="gender" for="male">Male <input type="radio" name="genero" id="male" value="male" checked="checked"></label>
+                        <label class="gender" for="female">Female <input type="radio" name="genero" id="female" value="female" checked="checked"></label>
+                        <label class="gender" for="other">Other <input type="radio" name="genero" id="other" value="other" checked="checked"></label>
+                    </div>
+                    <div class="pregunta">
+                        <label>How often do you buy fragrances?</label><br>
+                        <label><input type="radio" name="opcion" id="always" value="always" checked="checked">Always</label>
+                        <label><input type="radio" name="opcion" id="sometimes" value="sometimes" checked="checked">Sometimes</label>
+                        <label><input type="radio" name="opcion" id="never" value="never" checked="checked">Never</label>
+                    </div>
+                    <input type="button" name="send" id="send" value="Send" class="button">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="sevice">
+            <p><i class="fa-solid fa-truck-fast"></i>Express shipping</p>
+            <p><i class="fa-solid fa-credit-card"></i>Secure payment</p>
+        </div>
+        <div class="contact">
+            <nav>
+                <a href="mailto:support@billieeilishfragrances.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://www.instagram.com/billieeilishfragrances/"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://www.facebook.com/eilishfragrance"><i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://x.com/eilishfragrance"><i class="fa-brands fa-x-twitter"></i></a>
+                <a target="_blank" href="https://maps.app.goo.gl/mDW6HLBJ6Bz38hdJ9"><i class="fa-solid fa-location-dot"></i></a>
+            </nav>
+            <p>&copy;2024 All rights reserved - Billie Eilish</p>
+        </div>
+    </footer>
+</body>
+</html>

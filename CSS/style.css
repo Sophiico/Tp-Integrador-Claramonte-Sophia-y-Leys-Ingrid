@@ -1,0 +1,870 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: white;
+}
+
+body{
+    width: 100%;
+    min-height: 100dvh;
+    background-color: black;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+header img{
+    width: 210px;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+header nav a{
+    padding: 0 20px;
+    position: relative;
+    font-size: 18px;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s ease, left 0.3s ease; 
+}
+
+header nav a:hover::after {
+    width: calc(100% - 40px);
+    left: 20px;
+}
+
+
+.banner{
+    background-image: url(../img/bilis4.jpg);
+    width: 100%;
+    height: 900px;
+    background-size:cover;
+    background-position: center;
+}
+
+.black{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    width: 100%;
+}
+
+/* Sección 3 Fragancias */
+
+#section1{
+    width: 100%;
+}
+
+#fragancias{
+    display: flex;
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.img{
+    position: relative;
+    width: 0px;
+    flex-grow: 1;
+    overflow: hidden;
+    transition:  0.5s ease; 
+}
+
+#fragancias img{
+    width: 99%;
+    height: 99%;
+    object-fit: cover;
+}
+
+.img:hover{
+    flex-grow: 1.28; 
+}
+
+.img img{
+    opacity: 0.5;
+}
+
+.img:hover img{
+    opacity: 1;
+    filter: contrast(120%);
+    cursor: pointer;
+}
+
+.text{
+    width: 420px;
+    height: 100px;
+    position: absolute;
+    bottom: 12%;
+    right: 0;
+    left: 14%;
+    padding-right: 10px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    transition:  0.3s ease; 
+    text-shadow: 5px 5px 5px #000000;
+}
+
+#fragancias span{
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.img:hover .text{
+    opacity: 1;
+}
+
+/* Section Fragancia 3-Roja */
+
+#section2{
+    width: 100%;
+    height: 910px;
+    background-image: url(../img/fragbanner2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#bordon{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    position: relative;
+}
+
+#bordon article{
+    width: 30%;
+    height: 31%;
+    position: absolute;
+    top: 28%;
+    right: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 23px;
+}
+
+#bordon article h2{
+    font-weight: 400;
+    font-size: 2em;
+}
+
+#bordon article p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#bordon a{
+    align-self: center;
+    padding: 10px 15px;
+    background-color: white;
+    width: 200px;
+    border-radius: 20px;
+    color: black;
+    transition: .3s;
+
+}
+
+#bordon a:hover{
+    background-color: #c00000;
+    color: white;
+}
+
+/* Sección Noticias */
+
+#section3{
+    width: 100%;
+    height: 900px;
+    background-image: url(../img/eilish3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0% 30%;
+}
+
+.degrade{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,  rgb(0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    position: relative;
+}
+
+#noticias{
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    display: flex;
+    margin-top: 100px;
+}
+
+#noticias article{
+    border-radius: 20px;
+    margin-left: 10px;
+    height: 35%;
+    background-color: rgba(107, 42, 42, 0.3);
+    backdrop-filter:blur(10px);
+    flex: 1;
+    transition: .5s all ease;
+    display: flex;
+}
+
+#noticias div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 15px;
+}
+
+#noticias article:hover{
+    flex: 1.4;
+}
+
+#noticias article:hover p, #noticias article:hover h4, #noticias article:hover a{
+    font-size: medium;
+    opacity: 1;
+}
+
+#noticias img{
+    width: 50%;
+    min-height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+#noticias h2{
+    font-size: 30px;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#noticias article:hover h2{
+    padding-top: 5px;
+    transition: 0.5s;
+}
+
+#noticias p, #noticias a, #noticias h4{
+    opacity: 0;
+    font-size: 0;
+    transition: .3s all ease;
+}
+
+.readmore{
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 35px;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.readmore:hover{
+    background-color: rgb(61, 90, 170);
+    color: #fff;
+}
+
+/* Sección de publicidad */
+
+#section4{
+    width: 100%;
+    height: 480px;
+    display: flex;
+    overflow: hidden;
+}
+
+#imgtour{
+    background-image: url(../img/tour3.jpg);
+    background-size: cover;
+    width: 45%;
+    height: 100%;
+}
+
+#publi{
+    background-image: url(../img/americanexpress.jpg);
+    width: 27.5%;
+    height: 100%;
+    background-size: cover;
+}
+
+#publi2{
+    background-image: url(../img/spoti.jpg);
+    width: 27.5%;
+    height: 100%;
+    background-size: cover;
+}
+
+/* Sección del staff */
+
+#section5{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 90px auto 40px;
+}
+
+#section5 article{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+#section5 img{
+    width: 48%;
+    border-radius: 100%;
+}
+
+#section5 h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#section5 h4{
+    font-weight: 500;
+}
+
+#section5 a{
+    font-size: 30px;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    min-height: 175px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
+}
+
+footer i{
+    padding: 0 10px;
+}
+
+.sevice{
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    gap: 100px;
+    border-bottom: solid 1px white;
+    padding-bottom: 20px;
+}
+
+.contact a{
+    font-size: 25px;
+}
+
+.contact p{
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+/* Sign up page */
+
+.body2{
+    background-image: url(../img/bilis2.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main2{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    width: 100%;
+    min-height: 70dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main2 h2, .main3 h2{
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.main2 form{
+    width: 25%;
+    padding: 20px;
+    background-color: rgba(119, 98, 98, 0.3);
+    backdrop-filter:blur(10px);
+    border: 3px solid white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 90px;
+}
+
+.main2 .input{
+    margin: 20px;
+    width: 70%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    border-bottom: 3px solid rgb(197, 196, 196);
+    font-size: 19px;
+}
+
+.input::placeholder{
+    color: white;
+}
+
+.gender{
+    background-color: white;
+    padding:  5px 13px;
+    color: black;
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+.radiobutton{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.gender input{
+    appearance: none;
+}
+
+.gender:has(input:checked){
+    background-color: #c00000;
+    color: white;
+}
+
+.button{
+    background-color: white;
+    width: 80%;
+    height: 85px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    transition: .3s;
+    color: black;
+}
+
+.button:hover{
+    background-color: #c00000;
+    color: white;
+}
+
+/* Login page */
+
+#remember{
+    margin: 25px 0;
+}
+
+#remember label{  
+    margin: 0 10px;
+}
+
+form label a{
+    font-weight: 600;
+}
+
+.login, .main3 #send{
+    height: 50px;
+}
+
+#account{
+    margin: 20px 0;
+}
+
+
+/* Survey page */
+
+.body3{
+    background-image: url(../img/bilis5.jpg);
+    background-size: cover;
+    width: 100%;
+}
+
+.main3{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    width: 100%;
+}
+
+#encuesta{
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+.survey{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#encuesta img{
+    width: 50%;
+    height: 100%;
+    filter: brightness(82%) contrast(110%);
+}
+
+#img1{
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.survey form{
+    width: 85%;
+    padding: 30px 0;
+    background-color: rgba(119, 98, 98, 0.3);
+    backdrop-filter:blur(20px);
+    border: 3px solid white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.selector select:hover{
+    background-color: #c00000;
+    color: white;
+}
+
+select, #years{
+    width: 100%;
+    height: 48px;
+    font-size: 17px;
+}
+
+select{
+    color: #c00000;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+
+textarea::placeholder, #years::placeholder{
+    color: #ffffff;
+    border-bottom: 3px solid rgb(197, 196, 196);
+    padding: 7px;
+    resize: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+textarea, #years {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    text-align: center;
+}
+
+textarea{
+    padding: 5px 20px;
+    font-size: 19px;
+    width: 20em;
+    height: 4em;
+    resize: none;
+}
+
+
+.pregunta input{
+    margin: 10px;
+}
+
+.survey #send{
+    width: 50%;
+}
+
+.survey2 select{
+    margin:10px 0;
+}
+
+/* Products page */
+
+.bodyprod{
+    background-image: url(../img/bilis4.jpg);
+    background-attachment:fixed;
+}
+
+.main3 section{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.main3 section h2{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#products{
+    margin-top: 40px;
+    width: 100%;
+    text-align: left;
+}
+
+.contenedor{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    gap: 25px;
+}
+
+.contenedor article{
+    width: 33%;
+}
+
+.info{
+    width: 100%;
+    height: 10%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.info i{
+    font-size: 20px;
+    padding: 8px;
+    background-color: rgba(211, 211, 211, 0.3);
+    backdrop-filter:blur(5px);
+    border-radius: 100%;
+    color: rgb(250, 250, 250);
+    margin-right: 5px;
+}
+
+/* contenedor 1 */
+
+.fotoprodu{
+    width: 100%;
+    height: 80%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#fotoprodu1{
+    background-image: url(../img/1.jpg);
+    background-size: cover;
+    filter: contrast(105%);
+}
+
+#fotoprodu2{
+    background-image: url(../img/2.jpg);
+    background-size: cover;
+    filter: contrast(110%);
+}
+
+#fotoprodu3{
+    background-image: url(../img/3.jpg);
+    background-size: cover;
+}
+
+#fotoprodu1:hover{
+    background-image: url(../img/productos_hover1.jpg);
+    background-size: cover;
+}
+
+#fotoprodu2:hover{
+    background-image: url(../img/productos_hover2.jpg);
+    background-size: cover;
+}
+
+#fotoprodu3:hover{
+    background-image: url(../img/productos_hover3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* contenedor 2 */
+
+#fotoprodu4{
+    background-image: url(../img/6.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: contrast(110%);
+}
+
+#fotoprodu5{
+    background-image: url(../img/4.jpg);
+    background-size: cover;
+    filter: contrast(110%);
+}
+
+#fotoprodu6{
+    background-image: url(../img/5.jpg);
+    background-size: cover;
+    filter: contrast(110%);
+}
+
+#fotoprodu4:hover{
+    background-image: url(../img/productos_hover4.jpg);
+    background-size: cover;
+}
+
+#fotoprodu5:hover{
+    background-image: url(../img/productos_hover5.jpg);
+    background-size: cover;
+}
+
+#fotoprodu6:hover{
+    background-image: url(../img/productos_hover6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* contenedor 3*/
+
+#fotoprodu7{
+    background-image: url(../img/7.jpg);
+    background-size: cover;
+    filter: contrast(110%);
+}
+
+#fotoprodu8{
+    background-image: url(../img/12.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#fotoprodu9{
+    background-image: url(../img/14.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#fotoprodu7:hover{
+    background-image: url(../img/productos_hover7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#fotoprodu8:hover{
+    background-image: url(../img/15.jpg);
+    background-size: cover;
+}
+
+#fotoprodu9:hover{
+    background-image: url(../img/16.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Tabla de ranking */
+
+.body4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../img/eilish5.jpg);
+    background-attachment: fixed;
+    background-position: top center;
+}
+
+table{
+    border-collapse: collapse;
+    background-color: rgba(119, 98, 98, 0.3);
+    backdrop-filter:blur(3px);
+}
+
+td, th{
+    border: 2px solid#c00000f3;
+    padding: 20px ;
+}
+
+td{
+    line-height: 25px;
+}
+
+table tr:hover{
+    background-color: #be0b0bf3;
+    transition: .3s;
+}
+
+table td:hover{
+    background-color: #910909;
+}
+
+td ul li{
+    list-style: none;
+}
+
+
+@media screen and (max-width: 1366px) {
+
+    #section3{
+        height: 700px;
+    }
+
+    #fragancias {
+        width: 100%;
+        height: 620px;
+    }
+    
+    #noticias h2{
+        font-size: 23px;
+        padding-top: 30px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    #noticias article:hover p, #noticias article:hover h4, #noticias article:hover a{
+    font-size: 14px;
+    opacity: 1;
+    }
+
+    #noticias article:hover h2{
+        font-size: 19px;
+        padding-top: 5px;
+        transition: 0.5s;
+    }
+
+    #noticias p, #noticias a, #noticias h4{
+        opacity: 0;
+        font-size: 0;
+        transition: .3s all ease;
+    }
+
+    #section4{
+        width: 100%;
+        height: 340px;
+        display: flex;
+        overflow: hidden;
+    }
+
+}
